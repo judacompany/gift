@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<title>카카오낚시터 v.1.1</title>
+<link rel="canonical" href="http://testpang.com">
+<meta charset="UTF-8">
+<meta property="og:url" content="testpang.com">
+<meta name="naver-site-verification" content="4ad6b33c88cc1cce993803d4da391ae39944f377" />
+<meta name="title" content="카카오낚시터 - 기프티콘"/>
+<meta name="keywords" content="카카오낚시,만우절낚시,카카오톡,오챗낚시,낚시짤,만우절,선물하기낚시,가짜뉴스,카카오페이낚시,카톡,오톡낚시,가짜선물하기"/>
+<meta name="description" content="카카오낚시터에서 기프트콘을 만들어보세요">
+
+<meta property="og:title" content="카카오낚시터 - 기프티콘">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./uploads/">
+<meta property="og:description" content="선물과 메시지를 보냈습니다." >
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scaleable=no">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="./css/style.css">
+<script type='text/javascript'>
+Kakao.init('9fe6b9fdd423fa7628d4bba0a2ea3a43');
+	
+	
+	function link_kakao(img,name) { 
+		var name = $("#wr_name").val();
+		var sh_title = ""; 
+		
+		if(name){
+			var sh_desc = name+ "님이 선물과 메시지를 보냈습니다."; 
+		} else {
+			var sh_desc = name+ "선물과 메시지를 보냈습니다."; 
+		}
+		
+		Kakao.Link.sendDefault({ 
+			objectType: 'feed', 
+			content: { 
+				title: sh_title, 
+				description: sh_desc, 
+				imageUrl: 'http://gift.testpang.com'+img, 
+				imageWidth: 450,
+                        imageHeight: 800,
+				link: { 
+					mobileWebUrl: "http://gift.testpang.com/result.php", 
+					webUrl: "http://gift.testpang.com/result.php" 
+				 } 
+				 
+			}, 
+			buttons: [
+                        {
+                            title: '선물함으로 가기',
+                            link: {
+                                mobileWebUrl: 'http://gift.testpang.com/result.php',
+                            },
+                        },
+                    ],
+		}); 
+	}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23G7HVJHKL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23G7HVJHKL');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23G7HVJHKL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23G7HVJHKL');
+</script>
+<script data-ad-client="ca-pub-4977790403375949" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+	
+	<header id="header">
+		<div id="header-cap">
+			<a href="./index.php">카카오낚시터  v.1.1</a>
+			
+			<a href="mailto:kakaonaksiter@gmail.com" class="btn2" style="background-color:#F9E000;color:#3C1D1D;text-align:center;display:inline-block;float:right;padding:.3rem .5rem;margin-top:-5px;font-weight:bold;border-radius:.3rem;font-size:.8rem">문의하기</a>
+		</div>
+		<div id="header-top">
+			
+		</div>
+		<div id="header-bottom">
+			<nav id="header-nav">
+				<ul>
+					<li><a href="http://testpang.com/">뉴스</a></li>
+					<li class="active"><a href="http://gift.testpang.com/">선물하기</a></li>
+					<li><a href="http://bank.testpang.com">송금하기</a></li>
+					<li><a href="#" onclick="alert('준비중');">기타</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+		<h2 style="display:block;margin-top:1rem;padding-bottom:1rem">이름입력 후 선물을 클릭하세요</h2>
+	
+	<form action="index.php" method="post" enctype='multipart/form-data'>
+		<input type="hidden" name="result" value="Y">
+		<div class="field">
+			<label for="wr_name">보내는사람 이름</label>
+			<input type="text" name="wr_name"  placeholder="보내는사람 이름" class="form-control" id="wr_name">
+		</div>
+	</form>
+		
+	<div id="coupon-list">
+		
+		<ul class="list">
+			<li><a href="#none" onclick="link_kakao('./images/bbq2.png')"><img src="./images/bbq2.png"></a></li>
+			<li><a href="#none" onclick="link_kakao('./images/apple2.png')"><img src="./images/apple2.png"></a></li>
+			<li><a href="#none" onclick="link_kakao('./images/hongsam2.png')"><img src="./images/hongsam2.png"></a></li>
+			<li><a href="#none" onclick="link_kakao('./images/starbucks2.png')"><img src="./images/starbucks2.png"></a></li>
+		</ul>
+	</div>
+		
+	
+		
+	</div>
+	
+	<div id="counter" style="clear:both;font-size:1.2rem;font-weight:bold;display:flex;align-items:center;margin-top:2rem;margin-bottom:2rem;justify-content:center">
+	오늘 <img src="https://www.cutercounter.com/hits.php?id=hvxkofxo&nd=6&style=9" border="0" alt="hit counter" style="padding:0 .3rem"> 명이 속아버렸어~
+	</div>
+	
+	<a href="https://soonganjeju.modoo.at" target="_blank"><img src="./images/soongan.jpg" style="width:100%"></a>
+	
+	<footer style="clear:both;font-size:.8rem;background-color:#121212;color:#fff;text-align:center;padding:1rem;">
+		<a href="mailto:kakaonaksiter@gmail.com" style="color:#fff">kakaonaksiter@gmail.com</a>
+	</footer>
+	
+	
+	
+</body>
+</html>
